@@ -9,17 +9,31 @@
 @prefix obi: <http://purl.obolibrary.org/obo/obi.owl#>
 @prefix iao: <http://purl.obolibrary.org/obo/iao.owl#> .
 @prefix isk: <https://tib.eu/ontologies/isk/> .
+@prefix dro: <https://www.tib.eu/digitrubber#> .
 
 
 ##########################################################################
 #Individuals 
 ##########################################################################
 
-###  <http://purl.obolibrary.org/obo/obi.owl#scalar_value_specification_StearicAcid_ActualMass>
-<http://purl.obolibrary.org/obo/obi.owl#scalar_value_specification_StearicAcid_ActualMass> rdf:type owl:NamedIndividual ,
+###  <http://purl.obolibrary.org/obo/obi.owl#scalar_value_specification_StearicAcid_ActualMass_EPDM>
+<http://purl.obolibrary.org/obo/obi.owl#scalar_value_specification_StearicAcid_ActualMass_EPDM> rdf:type owl:NamedIndividual ,
                                                  <http://purl.obolibrary.org/obo/OBI_0001931> ;
                                                   #add properties 
-                                                 <http://purl.obolibrary.org/obo/OBI_0000293> <https://w3id.org/pmd/co/test/object1> ;
-                                                 <http://purl.obolibrary.org/obo/OBI_0000299> <https://w3id.org/pmd/co/test/object1> .
+                                                  #specifies value of
+                                                 <http://purl.obolibrary.org/obo/OBI_0001927> <http://purl.obolibrary.org/obo/PATO_0000125> ;
+                                                  #has specified numeric value
+                                                 <http://purl.obolibrary.org/obo/OBI_0001937> 12.0^^xsd:float ;
+                                                 <http://purl.obolibrary.org/obo/IAO_0000039> dro:DIGITRUBBER_000335 .
+
+### <http://purl.obolibrary.org/obo/obi.owl#scalar_value_specification_ActualSpeed_Rotor_EPDM>
+<http://purl.obolibrary.org/obo/obi.owl#scalar_value_specification_ActualSpeed_Rotor_EPDM> rdf:type owl:NamedIndividual ,
+                                                 <http://purl.obolibrary.org/obo/OBI_0001931> ;
+                                                  #add properties 
+                                                  #specifies value of
+                                                 <http://purl.obolibrary.org/obo/OBI_0001927> <http://purl.obolibrary.org/obo/PATO_0000008> ;
+                                                  #has specified numeric value
+                                                 <http://purl.obolibrary.org/obo/OBI_0001937> 45.0^^xsd:float ;
+                                                 <http://purl.obolibrary.org/obo/IAO_0000039> ex:unit_Umdrehungen_pro_Minute .
 
 
