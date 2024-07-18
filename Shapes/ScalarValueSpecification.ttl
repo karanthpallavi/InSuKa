@@ -15,7 +15,7 @@ ex:scalar_value_specification_x
  a sh:NodeShape ;
  sh:targetClass obi:scalar value specification;
  sh:property [
- sh:path ro:specifies value of;
+ sh:path obi:specifies value of;
  sh:class pmd:quality;
   sh:nodeKind sh:IRI ;
   sh:minCount 1 ;
@@ -27,7 +27,7 @@ sh:property [
   sh:maxCount 1 ;
  ] ;
 sh:property [
- sh:path ro:has specified numeric value;
+ sh:path obi:has specified numeric value;
  sh:datatype xsd:float;
  ] ;
 sh:closed true ;
