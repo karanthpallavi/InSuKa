@@ -1,0 +1,36 @@
+id: http://purl.obolibrary.org/obo/STATO_0000561
+name: confidencelevel
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  pmd: https://w3id.org/pmd/co/
+  obo: http://purl.obolibrary.org/obo/
+  obi: http://purl.obolibrary.org/obo/obi.owl/
+  iao: http://purl.obolibrary.org/obo/iao.owl/
+  stato: http://purl.obolibrary.org/stato.owl/
+
+imports:
+  - linkml:types
+
+classes:
+  confidence level:
+    class_uri: stato:STATO_0000561
+    slots:   ## specified as a list
+      - value
+  Container:
+    attributes:
+      confidencelevel:
+        multivalued: false
+        inlined_as_list: true
+        range: confidence level
+
+# slots are first-class entities in the metamodel
+# declaring them here allows them to be reused elsewhere
+slots:
+  id:
+    identifier: true
+  value:
+    required: true
+    description:
+      value specification of the quality measured of the object
+    slot_uri: obi:scalar_value_specification
