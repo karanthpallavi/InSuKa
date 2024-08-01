@@ -1,0 +1,25 @@
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix stato: <http://purl.obolibrary.org/stato.owl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.obolibrary.org/obo/STATO_0000561/:Container> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class stato:STATO_0000561 ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 0 ;
+            sh:path <http://purl.obolibrary.org/obo/STATO_0000561/:confidencelevel> ] ;
+    sh:targetClass <http://purl.obolibrary.org/obo/STATO_0000561/:Container> .
+
+stato:STATO_0000561 a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "value specification of the quality measured of the object" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path obi:scalar_value_specification ] ;
+    sh:targetClass stato:STATO_0000561 .
