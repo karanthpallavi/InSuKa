@@ -1,5 +1,5 @@
 id: http://purl.obolibrary.org/obo/STATO_0000561
-name: confidencelevel
+name: confidenceLevel
 prefixes:
   linkml: https://w3id.org/linkml/
   schema: http://schema.org/
@@ -12,17 +12,13 @@ prefixes:
 imports:
   - linkml:types
 
+#default_prefix: confidenceLevel
+
 classes:
   confidence level:
     class_uri: stato:STATO_0000561
     slots:   ## specified as a list
       - value
-  Container:
-    attributes:
-      confidencelevel:
-        multivalued: false
-        inlined_as_list: true
-        range: confidence level
 
 # slots are first-class entities in the metamodel
 # declaring them here allows them to be reused elsewhere
