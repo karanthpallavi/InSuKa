@@ -1,0 +1,32 @@
+id: http://purl.obolibrary.org/obo/STATO_0000314
+name: lowerConfidenceLimit
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  pmd: https://w3id.org/pmd/co/
+  obo: http://purl.obolibrary.org/obo/
+  obi: http://purl.obolibrary.org/obo/obi.owl/
+  iao: http://purl.obolibrary.org/obo/iao.owl/
+  stato: http://purl.obolibrary.org/stato.owl/
+
+imports:
+  - linkml:types
+
+#default_prefix: confidenceLevel
+
+classes:
+  confidence level:
+    class_uri: stato:STATO_0000314
+    slots:   ## specified as a list
+      - value
+
+# slots are first-class entities in the metamodel
+# declaring them here allows them to be reused elsewhere
+slots:
+  id:
+    identifier: true
+  value:
+    required: true
+    description:
+      lower confidence limit - lower bound of the confidence level specified for a measurement
+    slot_uri: obi:scalar_value_specification
