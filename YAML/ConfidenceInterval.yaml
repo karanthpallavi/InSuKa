@@ -1,0 +1,51 @@
+id: http://purl.obolibrary.org/obo/STATO_0000196
+name: confidenceInterval
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  pmd: https://w3id.org/pmd/co/
+  obo: http://purl.obolibrary.org/obo/
+  obi: http://purl.obolibrary.org/obo/obi.owl/
+  iao: http://purl.obolibrary.org/obo/iao.owl/
+  isk: https://tib.eu/ontologies/isk/
+  stato: http://purl.obolibrary.org/stato.owl
+imports:
+  - linkml:types
+#default_range: string
+
+classes:
+  Scalar Value Specification:
+    class_uri: stato:STATO_0000196
+    slots:   ## specified as a list
+      - confidence level
+      - lower confidence limit
+      - upper confidence limit
+    id_prefixes:
+    ##- ORCID
+    #Container:
+    #attributes:
+    #valuespecifications:
+    #multivalued: true
+    #inlined_as_list: true
+    #range: Scalar Value Specification
+# slots are first-class entities in the metamodel
+# declaring them here allows them to be reused elsewhere
+slots:
+  id:
+    identifier: true
+    required: true
+  confidence level:
+    slot_uri: stato:STATO_0000561
+    required: true
+    description:
+      level of confidence specified in percentage for the measurement made
+  lower confidence limit:
+    slot_uri: stato:STATO_0000315
+    required: true
+    description:
+      lower confidence limit - lower bound of the confidence level specified for a measurement
+  upper confidence limit:
+    slot_uri: stato:STATO_0000314
+    required: true
+    description:
+      upper confidence limit - upper bound of the confidence level specified for a measurement
