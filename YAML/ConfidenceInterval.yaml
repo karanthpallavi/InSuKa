@@ -14,7 +14,7 @@ imports:
 #default_range: string
 
 classes:
-  Scalar Value Specification:
+  Confidence Interval:
     class_uri: stato:STATO_0000196
     slots:   ## specified as a list
       - confidence level
@@ -22,12 +22,13 @@ classes:
       - upper confidence limit
     id_prefixes:
     ##- ORCID
-    #Container:
-    #attributes:
-    #valuespecifications:
-    #multivalued: true
-    #inlined_as_list: true
-    #range: Scalar Value Specification
+  Container:
+    tree_root: true
+    attributes:
+      confidenceinterval:
+        multivalued: true
+        inlined_as_list: true
+        range: Confidence Interval
 # slots are first-class entities in the metamodel
 # declaring them here allows them to be reused elsewhere
 slots:
