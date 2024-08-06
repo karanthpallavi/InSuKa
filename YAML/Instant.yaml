@@ -1,0 +1,58 @@
+id: http://www.w3.org/2006/time/Instant
+name: Instant
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  pmd: https://w3id.org/pmd/co/
+  isk: https://tib.eu/ontologies/isk/
+  time: http://www.w3.org/2006/time/
+imports:
+  - linkml:types
+classes:
+  instant:
+    class_uri: time:Instant
+    slots:   ## specified as a list
+      - time position
+      - XSD Date
+      - XSD date TimeStamp
+      - date Time
+      - temporal Reference System
+    id_prefixes:
+  Container:
+    tree_root: true
+    attributes:
+      Instant:
+        multivalued: true
+        inlined_as_list: true
+        range: instant
+# slots are first-class entities in the metamodel
+# declaring them here allows them to be reused elsewhere
+slots:
+  id:
+    identifier: true
+    required: true
+  time position:
+    slot_uri: time:TimePosition
+    required: true
+    description:
+      A temporal position described using either a (nominal) value from an ordinal reference system, or a (numeric) value in a temporal coordinate system.
+  XSD Date:
+    slot_uri: xsd:date
+    required: true
+    description:
+      Date data type is used to represent date in YYYY-MM-DD format.
+  XSD date TimeStamp:
+    slot_uri: xsd:dateTimeStamp
+    required: true
+    description:
+      dateTimeStamp is a data type defined in XML Schema 1.1. It represents a specific date and time in the format CCYY-MM-DDThh:mm:ss.sss.
+  date Time:
+    slot_uri: time:GeneralDateTimeDescription
+    required: true
+    description:
+      Description of date and time structured with separate values for the various elements of a calendar-clock system.
+  temporal Reference System:
+    slot_uri: time:TRS
+    required: true
+    description:
+      A temporal reference system, such as a temporal coordinate reference system (with an origin, direction, and scale), a calendar-clock combination, or a (possibly hierarchical) ordinal system.
