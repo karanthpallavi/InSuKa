@@ -28,7 +28,7 @@ slots:
     identifier: true
     required: true
   numeric position:
-    slot_uri: time:numericPosition
+    slot_uri: xsd:decimal
     required: true
     minimum_value: 1
     maximum_value: 1
