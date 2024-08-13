@@ -1,0 +1,58 @@
+id: http://purl.obolibrary.org/obo/IAO_0000414
+name: ScalarMeasurementDatum
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  pmd: https://w3id.org/pmd/co/
+  obo: http://purl.obolibrary.org/obo/
+  obi: http://purl.obolibrary.org/obo/obi.owl/
+  iao: http://purl.obolibrary.org/obo/iao.owl/
+  isk: https://tib.eu/ontologies/isk/
+  time: http://www.w3.org/2006/time/
+  stato: http://purl.obolibrary.org/stato.owl/
+imports:
+  - linkml:types
+#default_range: string
+
+classes:
+  Scalar Measurement Datum:
+    class_uri: iao:IAO_0000414
+    slots:   ## specified as a list
+      - object
+      - value
+      - confidence interval
+      - temporal
+    id_prefixes:
+  Container:
+    attributes:
+      Scalar Measurement Datum:
+        multivalued: true
+        inlined_as_list: true
+        range: Scalar Measurement Datum
+# slots are first-class entities in the metamodel
+# declaring them here allows them to be reused elsewhere
+slots:
+  id:
+    identifier: true
+    required: true
+  object:
+    slot_uri: pmd:object
+    required: true
+    description:
+      # Replace this by pmd:object definition when we find it
+      A material entity is an independent continuant that has some portion of matter as proper or improper continuant part.
+  value:
+    slot_uri: obi:OBI_0001933
+    required: true
+    description:
+      A value specification that consists of two parts - a numeral and a unit label.
+  confidence interval:
+    slot_uri: stato:STATO_0000196
+    required: true
+    description:
+      A confidence interval is a data item which defines an range of values in which a measurement or trial falls corresponding to a given probability.
+  temporal:
+    slot_uri: time:TemporalEntity
+    required: true
+    description:
+      A temporal interval or instant.
