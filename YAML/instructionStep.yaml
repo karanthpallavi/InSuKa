@@ -24,6 +24,7 @@ classes:
       - Mixer
       - Mixing
       - Material Entity
+      - numeric position
     id_prefixes:
   Container:
     attributes:
@@ -67,3 +68,8 @@ slots:
     description:
       # Replace with definition from PMD
       Material used in this instruction step
+  numeric position:
+    range: integer
+    required: true
+    description:
+      Position of the step in instruction set in the recipe
