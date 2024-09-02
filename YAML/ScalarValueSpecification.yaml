@@ -19,14 +19,15 @@ classes:
       - quality
       - unit
       - specified numeric value
+      - object
     id_prefixes:
       ##- ORCID
   Container:
     attributes:
       valuespecifications:
-      multivalued: true
-      inlined_as_list: true
-      range: Scalar Value Specification
+        multivalued: true
+        inlined_as_list: true
+        range: Scalar Value Specification
 # slots are first-class entities in the metamodel
 # declaring them here allows them to be reused elsewhere
 slots:
@@ -49,3 +50,9 @@ slots:
     required: true
     description:
       numeric value of a quality or datum measured
+  object:
+    slot_uri: pmd:Object
+    required: true
+    description:
+      #Replace with definition from PMD
+      Object whose quality is measured using this specification
