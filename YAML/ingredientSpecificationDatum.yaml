@@ -1,4 +1,4 @@
-id: https://tib.eu/ontologies/isk/IngredientSpecificationDatum
+id: https://w3id.org/pmd/co/IngredientSpecificationDatum
 name: IngredientSpecificationDatum
 prefixes:
   linkml: https://w3id.org/linkml/
@@ -20,7 +20,7 @@ classes:
     slots:   ## specified as a list
       - ingredient
       - quality
-      - ingredient specification
+      - scalar value specification
     id_prefixes:
   Container:
     attributes:
@@ -46,9 +46,8 @@ slots:
     description:
       #Place definition here - unable to find in pmd - class Quality
       Quality being concretized in the setting datum
-  ingredient specification:
-    slot_uri: pmd:IngredientSpecification
+  scalar value specification:
+    slot_uri: obi:scalarvaluespecification
     required: true
     description:
-      # Replace definition here from PMD
-      Specification of Ingredients
+      numeric value of a quality or datum measured
