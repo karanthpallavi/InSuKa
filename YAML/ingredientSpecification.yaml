@@ -1,4 +1,4 @@
-id: https://tib.eu/ontologies/isk/IngredientSpecification
+id: https://w3id.org/pmd/co/IngredientSpecification
 name: IngredientSpecification
 prefixes:
   linkml: https://w3id.org/linkml/
@@ -16,7 +16,7 @@ imports:
 
 classes:
   IngredientSpecification:
-    class_uri: isk:IngredientSpecification
+    class_uri: pmd:IngredientSpecification
     slots:   ## specified as a list
       - ingredient
       - ingredient specification datum
