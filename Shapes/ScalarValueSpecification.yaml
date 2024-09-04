@@ -1,0 +1,58 @@
+id: http://purl.obolibrary.org/obo/OBI_0001931
+name: ScalarValueSpecification
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  pmd: https://w3id.org/pmd/co/
+  obo: http://purl.obolibrary.org/obo/
+  obi: http://purl.obolibrary.org/obo/obi.owl/
+  iao: http://purl.obolibrary.org/obo/iao.owl/
+  isk: https://tib.eu/ontologies/isk/
+imports:
+  - linkml:types
+#default_range: string
+
+classes:
+  Scalar Value Specification:
+    class_uri: obi:OBI_0001931
+    slots:   ## specified as a list
+      - quality
+      - unit
+      - specified numeric value
+      - object
+    id_prefixes:
+      ##- ORCID
+  Container:
+    attributes:
+      valuespecifications:
+        multivalued: true
+        inlined_as_list: true
+        range: Scalar Value Specification
+# slots are first-class entities in the metamodel
+# declaring them here allows them to be reused elsewhere
+slots:
+  id:
+    identifier: true
+    required: true
+  quality:
+    slot_uri: pmd:quality
+    required: true
+    description:
+      measurement datum for a quality of an object at a time
+  unit:
+    slot_uri: iao:measurement_unit_label
+    required: true
+    description:
+      unit of the scalar value specified
+  specified numeric value:
+    range: float
+    minimum_value: 0.0
+    required: true
+    description:
+      numeric value of a quality or datum measured
+  object:
+    slot_uri: pmd:Object
+    required: true
+    description:
+      #Replace with definition from PMD
+      Object whose quality is measured using this specification
