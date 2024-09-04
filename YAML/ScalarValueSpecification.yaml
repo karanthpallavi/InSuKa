@@ -1,4 +1,4 @@
-id: https://tib.eu/ontologies/isk/scalarvaluespecification
+id: http://purl.obolibrary.org/obo/OBI_0001931
 name: ScalarValueSpecification
 prefixes:
   linkml: https://w3id.org/linkml/
@@ -14,7 +14,7 @@ imports:
 
 classes:
   Scalar Value Specification:
-    class_uri: obi:scalar_value_specification
+    class_uri: obi:OBI_0001931
     slots:   ## specified as a list
       - quality
       - unit
