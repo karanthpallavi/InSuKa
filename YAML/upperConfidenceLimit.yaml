@@ -1,4 +1,4 @@
-id: http://purl.obolibrary.org/obo/STATO_0000314
+id: https://tib.eu/ontologies/PMD_shapes/UpperConfidenceLimitShape
 name: lowerConfidenceLimit
 prefixes:
   linkml: https://w3id.org/linkml/
@@ -19,6 +19,8 @@ classes:
     class_uri: stato:STATO_0000314
     slots:   ## specified as a list
       - value
+      - created_by
+      - contributors
 
 # slots are first-class entities in the metamodel
 # declaring them here allows them to be reused elsewhere
@@ -28,5 +30,11 @@ slots:
   value:
     required: true
     description:
-      lower confidence limit - lower bound of the confidence level specified for a measurement
+      upper confidence limit - upper bound of the confidence level specified for a measurement
     slot_uri: obi:scalar_value_specification
+  created_by:
+    slot_uri: https://orcid.org/0000-0002-8280-0487
+    multivalued: true
+  contributors:
+    slot_uri: https://orcid.org/0009-0007-5934-1087
+    multivalued: true
