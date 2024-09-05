@@ -1,5 +1,5 @@
-id: http://purl.obolibrary.org/obo/OBI_0001931
-name: ScalarValueSpecification
+id: https://tib.eu/ontologies/PMD_shapes/ScalarValueSpecificationShape
+name: ScalarValueSpecificationShape
 prefixes:
   linkml: https://w3id.org/linkml/
   schema: http://schema.org/
@@ -16,10 +16,12 @@ classes:
   Scalar Value Specification:
     class_uri: obi:OBI_0001931
     slots:   ## specified as a list
-      - quality
-      - unit
       - specified numeric value
+      - unit
       - object
+      - quality
+      - created_by
+      - contributors
     id_prefixes:
       ##- ORCID
   Container:
@@ -34,25 +36,32 @@ slots:
   id:
     identifier: true
     required: true
-  quality:
-    slot_uri: pmd:quality
-    required: true
-    description:
-      measurement datum for a quality of an object at a time
-  unit:
-    slot_uri: iao:measurement_unit_label
-    required: true
-    description:
-      unit of the scalar value specified
   specified numeric value:
     range: float
     minimum_value: 0.0
     required: true
     description:
       numeric value of a quality or datum measured
-  object:
-    slot_uri: pmd:Object
+  unit:
+    slot_uri: iao:measurement_unit_label
     required: true
     description:
-      #Replace with definition from PMD
-      Object whose quality is measured using this specification
+      unit of the scalar value specified
+  object:
+    slot_uri: pmd:Object
+    required: false
+    description:
+      #Replace with definition from PMD - no definition found on PMD
+      #Definition of BFO Material
+      A material entity is an independent continuant that has some portion of matter as proper or improper continuant part.
+  quality:
+    slot_uri: pmd:quality
+    required: false
+    description:
+      specifically dependant continuant of a material entity
+  created_by:
+    slot_uri: https://orcid.org/0000-0002-8280-0487
+    multivalued: true
+  contributors:
+    slot_uri: https://orcid.org/0009-0007-5934-1087
+    multivalued: true
