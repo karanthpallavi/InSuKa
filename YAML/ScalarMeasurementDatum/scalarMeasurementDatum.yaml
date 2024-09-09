@@ -62,8 +62,10 @@ slots:
     description:
       A temporal interval or instant.
   created_by:
+    description: ORCID of Creator of the Pattern
     slot_uri: https://orcid.org/0000-0002-8280-0487
     multivalued: true
   contributors:
+    description: ORCID of Contributor of the Pattern
     slot_uri: https://orcid.org/0009-0007-5934-1087
     multivalued: true
