@@ -49,19 +49,21 @@ slots:
       unit of the scalar value specified
   object:
     slot_uri: pmd:Object
-    required: false
+    #required: false
     description:
       #Replace with definition from PMD - no definition found on PMD
       #Definition of BFO Material
       A material entity is an independent continuant that has some portion of matter as proper or improper continuant part.
   quality:
     slot_uri: pmd:quality
-    required: false
+    #required: false
     description:
       specifically dependant continuant of a material entity
   created_by:
+    description: ORCID of Creator of the Pattern
     slot_uri: https://orcid.org/0000-0002-8280-0487
     multivalued: true
   contributors:
+    description: ORCID of Contributor of the Pattern
     slot_uri: https://orcid.org/0009-0007-5934-1087
     multivalued: true
