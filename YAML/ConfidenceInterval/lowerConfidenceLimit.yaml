@@ -12,10 +12,8 @@ prefixes:
 imports:
   - linkml:types
 
-#default_prefix: confidenceLevel
-
 classes:
-  confidence level:
+  lower confidence limit:
     class_uri: stato:STATO_0000315
     slots:   ## specified as a list
       - value
