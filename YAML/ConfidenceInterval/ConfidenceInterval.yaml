@@ -28,7 +28,7 @@ classes:
     tree_root: true
     attributes:
       confidenceinterval:
-        multivalued: true
+        multivalued: false
         inlined_as_list: true
         range: Confidence Interval
 # slots are first-class entities in the metamodel
