@@ -1,5 +1,5 @@
 id: https://tib.eu/ontologies/PMD_shapes/UpperConfidenceLimitShape
-name: lowerConfidenceLimit
+name: upperConfidenceLimit
 prefixes:
   linkml: https://w3id.org/linkml/
   schema: http://schema.org/
@@ -15,7 +15,7 @@ imports:
 #default_prefix: confidenceLevel
 
 classes:
-  confidence level:
+  upper confidence limit:
     class_uri: stato:STATO_0000314
     slots:   ## specified as a list
       - value
