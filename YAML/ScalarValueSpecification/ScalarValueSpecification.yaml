@@ -27,7 +27,7 @@ classes:
   Container:
     attributes:
       valuespecifications:
-        multivalued: true
+        multivalued: false
         inlined_as_list: true
         range: Scalar Value Specification
 # slots are first-class entities in the metamodel
