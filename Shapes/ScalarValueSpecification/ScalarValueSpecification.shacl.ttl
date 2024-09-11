@@ -18,7 +18,21 @@
 obi:OBI_0001931 a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "A material entity is an independent continuant that has some portion of matter as proper or improper continuant part." ;
+    sh:property 
+        [ sh:datatype <xsd:float> ;
+            sh:description "numeric value of a quality or datum measured" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:minInclusive 0e+00 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path <https://tib.eu/ontologies/PMD_shapes/ScalarValueSpecificationShape/:specified_numeric_value> ],
+        [ sh:description "unit of the scalar value specified" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 1 ;
+            sh:path iao:measurement_unit_label ],
+        [ sh:description "A material entity is an independent continuant that has some portion of matter as proper or improper continuant part." ;
             sh:maxCount 1 ;
             sh:order 2 ;
             sh:path pmd:Object ],
@@ -29,20 +43,7 @@ obi:OBI_0001931 a sh:NodeShape ;
         [ sh:description "ORCID of Creator of the Pattern" ;
             sh:order 4 ;
             sh:path <https://orcid.org/0000-0002-8280-0487> ],
-        [ sh:description "unit of the scalar value specified" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 1 ;
-            sh:path iao:measurement_unit_label ],
         [ sh:description "ORCID of Contributor of the Pattern" ;
             sh:order 5 ;
-            sh:path <https://orcid.org/0009-0007-5934-1087> ],
-        [ sh:datatype <xsd:float> ;
-            sh:description "numeric value of a quality or datum measured" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:minInclusive 0e+00 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path <https://tib.eu/ontologies/PMD_shapes/ScalarValueSpecificationShape/:specified_numeric_value> ] ;
+            sh:path <https://orcid.org/0009-0007-5934-1087> ];
     sh:targetClass obi:OBI_0001931 .
