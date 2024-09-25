@@ -1,5 +1,5 @@
-id: https://tib.eu/ontologies/PMD_shapes/ScalarMeasurementDatumShape
-name: ScalarMeasurementDatumShape
+id: https://tib.eu/ontologies/PMD_shapes/ScalarMeasurementDatum
+name: ScalarMeasurementDatum
 prefixes:
   linkml: https://w3id.org/linkml/
   schema: http://schema.org/
@@ -26,12 +26,7 @@ classes:
       - created_by
       - contributors
     id_prefixes:
-  Container:
-    attributes:
-      Scalar Measurement Datum:
-        multivalued: true
-        inlined_as_list: true
-        range: Scalar Measurement Datum
+
 # slots are first-class entities in the metamodel
 # declaring them here allows them to be reused elsewhere
 slots:
