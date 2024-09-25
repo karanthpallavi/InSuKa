@@ -1,5 +1,5 @@
-id: https://tib.eu/ontologies/PMD_shapes/ScalarValueSpecificationShape
-name: ScalarValueSpecificationShape
+id: https://tib.eu/ontologies/PMD_shapes/ScalarValueSpecification
+name: ScalarValueSpecification
 prefixes:
   linkml: https://w3id.org/linkml/
   schema: http://schema.org/
@@ -26,7 +26,7 @@ classes:
       ##- ORCID
   Container:
     attributes:
-      valuespecifications:
+      scalarvaluespecification:
         multivalued: false
         inlined_as_list: true
         range: Scalar Value Specification
