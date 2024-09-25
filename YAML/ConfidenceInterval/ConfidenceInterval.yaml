@@ -1,5 +1,5 @@
 id: https://tib.eu/ontologies/PMD_shapes/ConfidenceInterval
-name: confidenceInterval
+name: ConfidenceInterval
 prefixes:
   linkml: https://w3id.org/linkml/
   schema: http://schema.org/
