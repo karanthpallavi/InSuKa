@@ -1,5 +1,5 @@
 id: https://tib.eu/ontologies/PMD_shapes/UpperConfidenceLimitShape
-name: upperConfidenceLimit
+name: UpperConfidenceLimit
 prefixes:
   linkml: https://w3id.org/linkml/
   schema: http://schema.org/
