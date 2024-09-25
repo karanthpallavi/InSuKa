@@ -1,5 +1,5 @@
 id: https://tib.eu/ontologies/PMD_shapes/ConfidenceLevel
-name: confidenceLevel
+name: ConfidenceLevel
 prefixes:
   linkml: https://w3id.org/linkml/
   schema: http://schema.org/
