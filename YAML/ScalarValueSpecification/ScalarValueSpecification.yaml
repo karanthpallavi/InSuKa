@@ -24,12 +24,6 @@ classes:
       - contributors
     id_prefixes:
       ##- ORCID
-  Container:
-    attributes:
-      scalarvaluespecification:
-        multivalued: false
-        inlined_as_list: true
-        range: Scalar Value Specification
 # slots are first-class entities in the metamodel
 # declaring them here allows them to be reused elsewhere
 slots:
