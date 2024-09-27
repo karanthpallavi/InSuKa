@@ -24,13 +24,6 @@ classes:
       - contributors
     id_prefixes:
     ##- ORCID
-  Container:
-    tree_root: true
-    attributes:
-      confidenceinterval:
-        multivalued: false
-        inlined_as_list: true
-        range: Confidence Interval
 # slots are first-class entities in the metamodel
 # declaring them here allows them to be reused elsewhere
 slots:
