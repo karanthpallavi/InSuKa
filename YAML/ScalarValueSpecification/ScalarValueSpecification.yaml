@@ -32,7 +32,6 @@ slots:
     required: true
   specified numeric value:
     range: float
-    minimum_value: 0.0
     required: true
     description:
       numeric value of a quality or datum measured
