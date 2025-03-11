@@ -16,13 +16,12 @@
 #Individuals
 ##########################################################################
 
-###  <https://tib.eu/ontologies/isk/Scalar_Value_Specification_RotorSpeed>
-<https://tib.eu/ontologies/isk/Scalar_Value_Specification_RotorSpeed> rdf:type owl:NamedIndividual ,
-<http://purl.obolibrary.org/obo/OBI_0001931> ;
-#add properties 
-#specifies value of
-<http://purl.obolibrary.org/obo/OBI_0001927> <https://tib.eu/ontologies/isk/RotorSpeed> ;
-#has specified numeric value
-<http://purl.obolibrary.org/obo/OBI_0001937> 80.0^^xsd:float ;
-# has measurement unit label
-<http://purl.obolibrary.org/obo/IAO_0000039>  <https://tib.eu/ontologies/isk/UPM>.
+<https://tib.eu/ontologies/isk/ScalarMeasurementDatum_RotorSpeed> rdf:type owl:NamedIndividual ,
+ <http://purl.obolibrary.org/obo/IAO_0000032> ;
+#add properties
+#is about
+<http://purl.obolibrary.org/obo/iao/IAO_0000136> <https://tib.eu/ontologies/isk/Rotor> ;
+# is quality measurement of
+<http://purl.obolibrary.org/obo/IAO_0000221> <https://tib.eu/ontologies/isk/RotorSpeed> ;
+# has value specification
+<http://purl.obolibrary.org/obo/OBI_0001938> <https://tib.eu/ontologies/isk/ScalarValueSpecification_RotorSpeed> .
