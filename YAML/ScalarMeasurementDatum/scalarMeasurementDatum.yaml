@@ -1,10 +1,13 @@
 id: https://tib.eu/ontologies/PMD_shapes/ScalarMeasurementDatum
 name: ScalarMeasurementDatum
+created_by: https://orcid.org/0000-0002-8280-0487
+contributors: https://orcid.org/0009-0007-5934-1087
 prefixes:
   linkml: https://w3id.org/linkml/
   schema: http://schema.org/
   pmd: https://w3id.org/pmd/co/
   obo: http://purl.obolibrary.org/obo/
+  bfo: http://purl.obolibrary.org/obo/bfo.owl/
   obi: http://purl.obolibrary.org/obo/obi.owl/
   iao: http://purl.obolibrary.org/obo/iao.owl/
   isk: https://tib.eu/ontologies/isk/
@@ -16,51 +19,186 @@ imports:
 
 classes:
   Scalar Measurement Datum:
-    class_uri: iao:IAO_0000414
+    class_uri: http://purl.obolibrary.org/obo/IAO_0000414
+    description: A scalar measurement datum is a measurement datum that is composed of two parts, numerals and a unit label.
     slots:   ## specified as a list
-      - object
-      - quality
-      - value
-      - confidence interval
-      - temporal
-      - created_by
-      - contributors
-    id_prefixes:
+      - is_about
+      - is_quality_measurement_of
+      - has_value_specification
+      - has_part
+      - has_time
 
-# slots are first-class entities in the metamodel
-# declaring them here allows them to be reused elsewhere
+
+  Scalar Value Specification:
+    class_uri: http://purl.obolibrary.org/obo/OBI_0001931
+    description:
+      A value specification that consists of two parts - a numeral and a unit label
+    slots:
+      - has_specified_numeric_value
+      - has_measurement_unit_label
+      - is_about_object
+      - specifies_value_of
+
+  Confidence Interval:
+    class_uri: http://purl.obolibrary.org/obo/STATO_0000196
+    description:
+      A confidence interval is a data item which defines an range of values in which a measurement or trial falls corresponding to a given probability.
+    slots:
+      - confidence_level
+      - lower_confidence_limit
+      - upper_confidence_limit
+
+  Temporal Entity:
+    class_uri: https://www.w3.org/TR/owl-time/#time:TemporalEntity
+    description:
+      A temporal interval or instant.
+    slots:
+      - before
+      - after
+
+  objectlabel:
+    class_uri: http://purl.obolibrary.org/obo/BFO_0000030
+  measurementunitlabel:
+    class_uri: http://purl.obolibrary.org/obo/IAO_0000003
+  qualitylabel:
+    class_uri: http://purl.obolibrary.org/obo/BFO_0000019
+  confIntervalLabel:
+    class_uri: http://purl.obolibrary.org/obo/STATO_0000196
+  confidenceLevelLabel:
+    class_uri: http://purl.obolibrary.org/obo/STATO_0000561
+  upperConfLimitLabel:
+    class_uri: http://purl.obolibrary.org/obo/STATO_0000314
+  lowerConfLimitLabel:
+    class_uri: http://purl.obolibrary.org/obo/STATO_0000315
+  scalarvaluespecLabel:
+    class_uri: http://purl.obolibrary.org/obo/OBI_0001933
+  timeLabel:
+    class_uri: https://www.w3.org/TR/owl-time/#time:TemporalEntity
+
+  # TODO: annotate that this is a container/root class
+  Container:
+    tree_root: true
+    slots:
+      - scalarmeasurementdatums
+      - scalarvaluespecifications
+
 slots:
-  id:
-    identifier: true
+  is_about:
+    slot_uri: http://purl.obolibrary.org/obo/IAO_0000136
+    range: objectlabel
     required: true
-  object:
-    slot_uri: pmd:object
-    required: true
+    inlined: true
     description:
       A discernable, tangible or simulated entity that is processed in a process by a processing node.
-  quality:
-    slot_uri: pmd:quality
+
+  is_quality_measurement_of:
+    slot_uri: http://purl.obolibrary.org/obo/IAO_0000221
+    range: qualitylabel
     required: true
+    inlined: true
     description:
-      specifically dependant continuant of a material entity
-  value:
-    slot_uri: obi:OBI_0001933
+      specifically dependant continuant of a material entity.
+
+  has_value_specification:
+    slot_uri: http://purl.obolibrary.org/obo/OBI_0001938
+    range: scalarvaluespecLabel
     required: true
     description:
       A value specification that consists of two parts - a numeral and a unit label.
-  confidence interval:
-    slot_uri: stato:STATO_0000196
+
+  has_part:
+    slot_uri: http://purl.obolibrary.org/obo/BFO_0000051
+    range: confIntervalLabel
+    #inlined: true
     description:
       A confidence interval is a data item which defines an range of values in which a measurement or trial falls corresponding to a given probability.
-  temporal:
-    slot_uri: time:TemporalEntity
+
+  has_time:
+    slot_uri: https://www.w3.org/TR/owl-time/#time:hasTime
+    range: timeLabel
+    #inlined: true
     description:
       A temporal interval or instant.
-  created_by:
-    description: ORCID of Creator of the Pattern
-    slot_uri: https://orcid.org/0000-0002-8280-0487
+
+  has_specified_numeric_value:
+    range: float
+    #removed limit for minimum_value - temperatures can be negative
+    required: true
+    slot_uri: http://purl.obolibrary.org/obo/OBI_0001937
+    inlined: true
+    description:
+      numeric value of a quality or datum measured.
+
+  has_measurement_unit_label:
+    range: measurementunitlabel
+    slot_uri: http://purl.obolibrary.org/obo/IAO_0000039
+    inlined: true
+    description:
+      unit of the scalar value specified.
+
+  is_about_object:
+    range: objectlabel
+    slot_uri: http://purl.obolibrary.org/obo/IAO_0000136
+    #inlined: true
+    #required: false
+    description:
+      #Replace with definition from PMD - no definition found on PMD
+      #Definition of BFO Material
+      A material entity is an independent continuant that has some portion of matter as proper or improper continuant part.
+
+  specifies_value_of:
+    range: qualitylabel
+    slot_uri: http://purl.obolibrary.org/obo/OBI_0001927
+    #inlined: true
+    #specifies value of
+    #required: false
+    description:
+      specifically dependant continuant of a material entity.
+
+  confidence_level:
+    range: confidenceLevelLabel
+    slot_uri: http://purl.obolibrary.org/obo/BFO_0000051
+    #inlined: true
+    description:
+      level of confidence specified in percentage for the measurement made.
+
+  lower_confidence_limit:
+    range: lowerConfLimitLabel
+    slot_uri: http://purl.obolibrary.org/obo/BFO_0000051
+    #inlined: true
+    description:
+      lower confidence limit - lower bound of the confidence level specified for a measurement.
+
+  upper_confidence_limit:
+    range: upperConfLimitLabel
+    slot_uri: http://purl.obolibrary.org/obo/BFO_0000051
+    #inlined: true
+    description:
+      upper confidence limit - upper bound of the confidence level specified for a measurement.
+
+  before:
+    range: timeLabel
+    slot_uri: https://www.w3.org/TR/owl-time/#time:before
+    #inlined: true
+    description:
+      The subject is a temporal entity that occurs before the object. If a temporal entity T1 is before another temporal entity T2, then the end of T1 is before the beginning of T2. Thus, before can be considered to be basic to instants and derived for intervals.
+
+  after:
+    range: timeLabel
+    slot_uri: https://www.w3.org/TR/owl-time/#time:after
+    #inlined: true
+    description:
+      The subject is a temporal entity that occurs after the object. If a temporal entity T1 is after another temporal entity T2, then the beginning of T1 is after the end of T2.
+
+
+  scalarmeasurementdatums:
+    range: Scalar Measurement Datum
+    #inlined: true
+    inlined_as_list: true
     multivalued: true
-  contributors:
-    description: ORCID of Contributor of the Pattern
-    slot_uri: https://orcid.org/0009-0007-5934-1087
+
+  scalarvaluespecifications:
+    range: Scalar Value Specification
+    #inlined: true
+    inlined_as_list: true
     multivalued: true
