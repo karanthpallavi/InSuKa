@@ -1,0 +1,21 @@
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix stato: <http://purl.obolibrary.org/stato.owl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+stato:STATO_0000314 a sh:NodeShape ;
+    sh:closed false ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "ORCID of Contributor of the Pattern" ;
+            sh:order 2 ;
+            sh:path <https://orcid.org/0009-0007-5934-1087> ],
+        [ sh:description "upper confidence limit - upper bound of the confidence level specified for a measurement" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path obi:OBI_0001931 ],
+        [ sh:description "ORCID of Creator of the Pattern" ;
+            sh:order 1 ;
+            sh:path <https://orcid.org/0000-0002-8280-0487> ] ;
+    sh:targetClass stato:STATO_0000314 .
