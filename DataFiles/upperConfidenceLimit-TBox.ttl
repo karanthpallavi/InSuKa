@@ -1,0 +1,14 @@
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix stato: <http://purl.obolibrary.org/stato.owl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:upperConfidenceLimitPattern
+    a sh:NodeShape ;
+    sh:targetClass  <http://purl.obolibrary.org/obo/STATO_0000314> ; 
+    sh:property [            
+        sh:path obi:OBI_0001938 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
