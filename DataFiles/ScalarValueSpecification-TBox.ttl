@@ -1,0 +1,18 @@
+@prefix iao: <http://purl.obolibrary.org/obo/iao.owl/> .
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:ScalarValueSpecificationPattern
+    a sh:NodeShape ;
+    sh:targetClass  <http://purl.obolibrary.org/obo/obi.owl/OBI_0001931> ; 
+    sh:property [            
+        sh:path iao:IAO_0000039 ;        
+        sh:maxCount 1 ;
+    ] ;
+	sh:property [            
+        sh:path obi:OBI_0001937 ;        
+        sh:maxCount 1 ;
+    ] ;
