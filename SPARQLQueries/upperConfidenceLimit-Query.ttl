@@ -1,0 +1,15 @@
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix stato: <http://purl.obolibrary.org/stato.owl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+select ?upperConfLimit scalarvaluespec ?numericvalue ?unit
+    WHERE
+{
+	?upperConfLimit a stato:STATO_0000314.
+	?upperConfLimit obi:OBI_0001938 ?scalarvaluespec.
+    ?scalarvaluespec a obo:OBI_0001937.
+    ?scalarvaluespec obi:OBI_0001937 ?numericvalue.
+    ?scalarvaluespec iao:IAO_0000039 ?unit .
+}
