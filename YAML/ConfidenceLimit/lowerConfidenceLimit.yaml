@@ -20,7 +20,7 @@ classes:
     slots:   ## specified as a list
       - value
   valueLabel:
-    class_uri: obi:OBI_0001931
+    class_uri: obi:OBI_0001933
 
 # slots are first-class entities in the metamodel
 # declaring them here allows them to be reused elsewhere
@@ -33,4 +33,4 @@ slots:
     minimum_value: 0.0
     description:
       lower confidence limit - lower bound of the confidence level specified for a measurement
-    slot_uri: OBI:OBI_0001938
+    slot_uri: obi:OBI_0001938
