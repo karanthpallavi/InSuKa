@@ -4,7 +4,7 @@
 @prefix stato: <http://purl.obolibrary.org/stato.owl/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-select ?upperConfLimit scalarvaluespec ?numericvalue ?unit
+select ?upperConfLimit ?scalarvaluespec ?numericvalue ?unit
     WHERE
 {
 	?upperConfLimit a stato:STATO_0000314.
