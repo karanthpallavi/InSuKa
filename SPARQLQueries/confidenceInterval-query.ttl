@@ -1,0 +1,32 @@
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix stato: <http://purl.obolibrary.org/stato.owl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+select ?confInterval ?confLevel ?scalarvaluespec_confLevel ?numericvalue_confLevel ?unit_confLevel ?upperConfLimit ?scalarvaluespec_upperLimit ?numericval_upperLimit ?unit_upperLimit ?lowerConfLimit ?scalarvaluespec_lowerLimit ?numericval_lowerLimit ?unit_lowerLimit
+    WHERE
+{
+	?confInterval a stato:STATO_0000196.
+	?confInterval obo:BFO_0000051 ?confLevel.
+	?confInterval obo:BFO_0000051 ?upperConfLimit.
+	?confInterval obo:BFO_0000051 ?lowerConfLimit.
+	
+	?confLevel a stato:STATO_0000561.
+	?confLevel obi:OBI_0001938 ?scalarvaluespec.
+    ?scalarvaluespec a obo:OBI_0001937.
+    ?scalarvaluespec obi:OBI_0001937 ?numericvalue.
+    ?scalarvaluespec iao:IAO_0000039 ?unit .
+	
+	?upperConfLimit a stato:STATO_0000314.
+	?upperConfLimit obi:OBI_0001938 ?scalarvaluespec_upperLimit.
+    ?scalarvaluespec_upperLimit a obo:OBI_0001937.
+    ?scalarvaluespec_upperLimit obi:OBI_0001937 ?numericval_upperLimit.
+    ?scalarvaluespec_upperLimit iao:IAO_0000039 ?unit_upperLimit .
+	
+	?lowerConfLimit a stato:STATO_0000315.
+	?lowerConfLimit obi:OBI_0001938 ?scalarvaluespec_lowerLimit.
+    ?scalarvaluespec_lowerLimit a obo:OBI_0001937.
+    ?scalarvaluespec_lowerLimit obi:OBI_0001937 ?numericval_lowerLimit.
+    ?scalarvaluespec_lowerLimit iao:IAO_0000039 ?unit_lowerLimit .
+}
