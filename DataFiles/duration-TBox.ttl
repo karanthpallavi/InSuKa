@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix time1: <http://www.w3.org/2006/time/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:durationPattern
+    a sh:NodeShape ;
+    sh:targetClass  time1:duration ; 
+    sh:property [
+		sh:class  :UnitMinute;
+        sh:path time1:unitType ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	[ sh:class <xsd:decimal> ;
+            sh:description "Value of a temporal extent expressed as a number scaled by a temporal unit." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 0 ;
+            sh:path time1:numericDuration ] ;
