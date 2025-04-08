@@ -1,5 +1,7 @@
 id: https://tib.eu/ontologies/PMD_shapes/ConfidenceLevel
 name: ConfidenceLevel
+created_by: https://orcid.org/0000-0002-8280-0487
+contributors: https://orcid.org/0009-0007-5934-1087
 prefixes:
   linkml: https://w3id.org/linkml/
   schema: http://schema.org/
@@ -19,8 +21,8 @@ classes:
     class_uri: stato:STATO_0000561
     slots:   ## specified as a list
       - value
-      - created_by
-      - contributors
+  valueLabel:
+    class_uri: obi:OBI_0001933
 
 # slots are first-class entities in the metamodel
 # declaring them here allows them to be reused elsewhere
@@ -28,15 +30,8 @@ slots:
   id:
     identifier: true
   value:
+    range: valueLabel
     required: true
     description:
       level of confidence specified in percentage for the measurement made
-    slot_uri: obi:scalar_value_specification
-  created_by:
-    description: ORCID of Creator of the Pattern
-    slot_uri: https://orcid.org/0000-0002-8280-0487
-    multivalued: true
-  contributors:
-    description: ORCID of Contributor of the Pattern
-    slot_uri: https://orcid.org/0009-0007-5934-1087
-    multivalued: true
+    slot_uri: obi:OBI_0001938
