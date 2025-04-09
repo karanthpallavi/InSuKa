@@ -1,0 +1,11 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix time1: <http://www.w3.org/2006/time/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+select ?timePosition ?position
+        WHERE
+        {
+            ?timePosition a time1:TimePosition .
+			?timePosition time1:numericPosition ?position .
+        }
