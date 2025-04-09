@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix time1: <http://www.w3.org/2006/time/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:InstantPattern
+    a sh:NodeShape ;
+    sh:targetClass  time1:Instant ; 
+    sh:property [
+		sh:class  time1:GeneralDateTimeDescription;
+        sh:path time1:inDateTime ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  time1:TimePosition;
+        sh:path time1:inTimePosition ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  xsd:gYear;
+        sh:path time1:inXSDgYear ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  xsd:date;
+        sh:path time1:inXSDDate ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  xsd:gYearMonth;
+        sh:path time1:inXSDgYearMonth ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  xsd:dateTimeStamp;
+        sh:path time1:inXSDDateTimeStamp ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
