@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix time1: <http://www.w3.org/2006/time/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:temporalDurationPattern
+    a sh:NodeShape ;
+    sh:targetClass  time1:TemporalDuration ; 
+    sh:property [
+		sh:class  xsd:duration;
+        sh:path time1:hasXSDDuration ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
