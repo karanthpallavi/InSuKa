@@ -1,0 +1,15 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix time1: <http://www.w3.org/2006/time/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+##########################################################################
+#Individuals
+##########################################################################
+
+<https://tib.eu/ontologies/isk/durationdescription_Mixing> rdf:type owl:NamedIndividual ,
+time1:GeneralDurationDescription ;
+#add properties 
+time1:minutes 4 ;
+time1:hours 5;
+time1:days 30.
