@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix time1: <http://www.w3.org/2006/time/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+select ?Instant ?dateTime ?timePos ?year ?date ?month ?dateTimeStamp
+        WHERE
+        {
+            ?Instant a time1:Instant .
+			?Instant time1:inDateTime ?dateTime.
+			?Instant time1:inTimePosition ?timePos .
+			?Instant time1:inXSDgYear ?year .
+			?Instant time1:inXSDDate ?date .
+			?Instant time1:inXSDgYearMonth ?month .
+			?Instant time1:inXSDDateTimeStamp ?dateTimeStamp .
+        }
