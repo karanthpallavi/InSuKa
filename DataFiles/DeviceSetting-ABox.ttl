@@ -1,0 +1,20 @@
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ro: <http://purl.obolibrary.org/obo/ro.owl/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+##########################################################################
+#Individuals
+##########################################################################
+<https://tib.eu/ontologies/isk/SettingDatum_RotorSpeed> rdf:type owl:NamedIndividual,
+pmd:SettingDatum;
+
+<https://tib.eu/ontologies/isk/Speed> rdf:type owl:NamedIndividual,
+pmd:Quality;
+
+<https://tib.eu/ontologies/isk/DeviceSetting_RotorSpeed> rdf:type owl:NamedIndividual ,
+obi:OBI_0000654;
+ro:0000059 <https://tib.eu/ontologies/isk/SettingDatum_RotorSpeed>;
+ro:0002566 <https://tib.eu/ontologies/isk/Speed>.

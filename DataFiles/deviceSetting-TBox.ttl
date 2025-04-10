@@ -1,0 +1,22 @@
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ro: <http://purl.obolibrary.org/obo/ro.owl/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:DeviceSettingPattern
+    a sh:NodeShape ;
+    sh:targetClass  obi:OBI_0000654 ; 
+    sh:property [
+		sh:class  pmd:SettingDatum;
+        sh:path ro:0000059 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  pmd:Quality;
+        sh:path ro:0002566 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
