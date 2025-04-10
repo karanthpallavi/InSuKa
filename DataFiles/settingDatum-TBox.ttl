@@ -20,3 +20,9 @@ ex:SettingDatumPattern
         sh:maxCount 1;
 		sh:minCount 1;
     ] ;
+	sh:property [
+		sh:class  obi:OBI_0001931;
+        sh:path obi:OBI_0001938 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;

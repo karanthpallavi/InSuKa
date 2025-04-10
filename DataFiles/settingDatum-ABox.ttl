@@ -8,6 +8,9 @@
 ##########################################################################
 #Individuals
 ##########################################################################
+<https://tib.eu/ontologies/isk/Speed_ScalarValueSpecification> rdf:type owl:NamedIndividual,
+obi:OBI_0001931;
+
 <https://tib.eu/ontologies/isk/Speed> rdf:type owl:NamedIndividual,
 pmd:Quality;
 
@@ -17,4 +20,5 @@ pmd:Device;
 <https://tib.eu/ontologies/isk/SettingDatum_RotorSpeed> rdf:type owl:NamedIndividual,
 pmd:SettingDatum;
 iao:IAO_0000136 <https://tib.eu/ontologies/isk/Rotor>;
-ro:0000058 <https://tib.eu/ontologies/isk/Speed> .
+ro:0000058 <https://tib.eu/ontologies/isk/Speed> ;
+obi:OBI_0001938 <https://tib.eu/ontologies/isk/Speed_ScalarValueSpecification> .
