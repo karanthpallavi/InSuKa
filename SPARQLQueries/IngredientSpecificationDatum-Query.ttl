@@ -1,0 +1,17 @@
+@prefix isk: <https://tib.eu/ontologies/isk/> .
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ro: <http://purl.obolibrary.org/obo/ro.owl/> .
+
+select ?ingredSpecDatum ?ingred ?quality ?scalarValueSpec ?numericValue WHERE
+{
+	?ingredSpecDatum a isk:IngredientSpecificationDatum.
+	?ingredSpecDatum ro:0000058 ?quality.
+	?ingredSpecDatum iao:IAO_0000136 ?ingred.
+	?ingredSpecDatum obi:OBI_0001938 ?scalarValueSpec.
+	?scalarValueSpec a obi:OBI_0001931.
+	?scalarValueSpec obi:OBI_0001937 ?numericValue.
+}
