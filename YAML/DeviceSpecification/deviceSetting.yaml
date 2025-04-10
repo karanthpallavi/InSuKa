@@ -1,0 +1,56 @@
+id: http://purl.obolibrary.org/obo/OBI_0000654
+name: devicesetting
+created_by: https://orcid.org/0000-0002-8280-0487
+contributors: https://orcid.org/0009-0007-5934-1087
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  pmd: https://w3id.org/pmd/co/
+  obo: http://purl.obolibrary.org/obo/
+  obi: http://purl.obolibrary.org/obo/obi.owl/
+  iao: http://purl.obolibrary.org/obo/iao.owl/
+  isk: https://tib.eu/ontologies/isk/
+  time: http://www.w3.org/2006/time/
+  stato: http://purl.obolibrary.org/stato.owl/
+  ro: http://purl.obolibrary.org/obo/ro.owl/
+imports:
+  - linkml:types
+#default_range: string
+
+classes:
+  device setting:
+    class_uri: obi:OBI_0000654
+    slots:   ## specified as a list
+      - physical quality
+      - setting datum
+    id_prefixes:
+  physicalQualityLabel:
+    class_uri: pmd:Quality
+  settingDatumLabel:
+    class_uri: pmd:SettingDatum
+  Container:
+    attributes:
+      device setting:
+        multivalued: true
+        inlined_as_list: true
+        range: device setting
+# slots are first-class entities in the metamodel
+# declaring them here allows them to be reused elsewhere
+slots:
+  id:
+    identifier: true
+    required: true
+  physical quality:
+    range: physicalQualityLabel
+    slot_uri: ro:0002566
+    required: true
+    description:
+      #Place definition here - unable to find in pmd - class Quality
+      Quality being concretized in the setting datum
+  setting datum:
+    range: settingDatumLabel
+    slot_uri: ro:0000059
+    required: true
+    description:
+      #Place definition here - unable to find in pmd - class Setting Datum
+      Setting data for device setting
