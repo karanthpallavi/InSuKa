@@ -1,0 +1,14 @@
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+select ?ingredSpec ?ingred ?ingredSpecDatum WHERE
+{
+	?ingredSpec a isk:IngredientSpecification.
+	?ingredSpec iao:IAO_0000136 ?ingred .
+	?ingredSpec obo:BFO_0000051 ?ingredSpecDatum.
+	?ingred a pmd:Material.
+	?ingredSpecDatum a isk:IngredientSpecificationDatum.
+}
