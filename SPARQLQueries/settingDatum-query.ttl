@@ -1,0 +1,17 @@
+@prefix iao: <http://purl.obolibrary.org/obo/iao.owl/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ro: <http://purl.obolibrary.org/obo/ro.owl/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+select ?setting_datum ?device ?physical_quality 
+        WHERE
+        {
+            ?setting_datum a pmd:SettingDatum .
+			?setting_datum ro:0000058 ?physical_quality .
+			?setting_datum iao:IAO_0000136 ?device .
+			?device a pmd:Device.
+			?physical_quality a pmd:Quality.
+        }
