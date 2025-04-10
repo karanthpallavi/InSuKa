@@ -1,0 +1,14 @@
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ro: <http://purl.obolibrary.org/obo/ro.owl/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+select ?device ?physical_quality ?device_setting
+        WHERE
+        {
+            ?device a pmd:device .
+			?device ro:0000086 ?physical_quality .
+			?device ro:0000086 ?device_setting .
+        }
