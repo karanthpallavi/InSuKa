@@ -1,0 +1,22 @@
+@prefix iao: <http://purl.obolibrary.org/obo/iao.owl/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:DeviceSpecificationPattern
+    a sh:NodeShape ;
+    sh:targetClass  pmd:DeviceSpecification ; 
+    sh:property [
+		sh:class  pmd:Device;
+        sh:path iao:IAO_0000136 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  pmd:SettingDatum;
+        sh:path obo:BFO_0000051 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;

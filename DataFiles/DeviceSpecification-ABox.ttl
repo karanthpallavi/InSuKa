@@ -1,0 +1,27 @@
+@prefix iao: <http://purl.obolibrary.org/obo/iao.owl/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+##########################################################################
+#Individuals
+##########################################################################
+
+<https://tib.eu/ontologies/isk/Speed_ScalarValueSpecification> rdf:type owl:NamedIndividual,
+obi:OBI_0001931;
+
+<https://tib.eu/ontologies/isk/Rotor> rdf:type owl:NamedIndividual,
+pmd:Device;
+
+<https://tib.eu/ontologies/isk/SettingDatum_RotorSpeed> rdf:type owl:NamedIndividual,
+pmd:SettingDatum;
+iao:IAO_0000136 <https://tib.eu/ontologies/isk/Rotor>;
+ro:0000058 <https://tib.eu/ontologies/isk/Speed> ;
+obi:OBI_0001938 <https://tib.eu/ontologies/isk/Speed_ScalarValueSpecification> .
+
+<https://tib.eu/ontologies/isk/DeviceSpecification_Rotor> rdf:type owl:NamedIndividual,
+pmd:DeviceSpecification;
+iao:IAO_0000136 <https://tib.eu/ontologies/isk/Rotor>;
+obo:BFO_0000051 <https://tib.eu/ontologies/isk/SettingDatum_RotorSpeed>.
