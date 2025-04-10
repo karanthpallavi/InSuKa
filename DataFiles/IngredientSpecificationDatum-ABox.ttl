@@ -1,0 +1,26 @@
+@prefix isk: <https://tib.eu/ontologies/isk/> .
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ro: <http://purl.obolibrary.org/obo/ro.owl/> .
+
+
+##########################################################################
+#Individuals
+##########################################################################
+<https://tib.eu/ontologies/isk/Mass_EPDM> rdf:type owl:NamedIndividual,
+pmd:Quality.
+
+<https://tib.eu/ontologies/isk/Ingredient_EPDM> rdf:type owl:NamedIndividual,
+pmd:Material.
+
+<https://tib.eu/ontologies/isk/ScalarValueSpecification_Ingredient_EPDM> rdf:type owl:NamedIndividual,
+obi:OBI_0001931.
+
+<https://tib.eu/ontologies/isk/IngredientSpecificationDatum_EPDM> rdf:type owl:NamedIndividual,
+isk:IngredientSpecificationDatum;
+ro:0000058 <https://tib.eu/ontologies/isk/Mass_EPDM>;
+iao:IAO_0000136 <https://tib.eu/ontologies/isk/Ingredient_EPDM>;
+obi:OBI_0001938 <https://tib.eu/ontologies/isk/ScalarValueSpecification_Ingredient_EPDM> .
