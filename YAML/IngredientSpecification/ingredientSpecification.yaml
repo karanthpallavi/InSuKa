@@ -1,5 +1,7 @@
 id: https://w3id.org/pmd/co/IngredientSpecification
 name: IngredientSpecification
+created_by: https://orcid.org/0000-0002-8280-0487
+contributors: https://orcid.org/0009-0007-5934-1087
 prefixes:
   linkml: https://w3id.org/linkml/
   schema: http://schema.org/
@@ -21,12 +23,10 @@ classes:
       - ingredient
       - ingredient specification datum
     id_prefixes:
-  Container:
-    attributes:
-      Ingredient Specification:
-        multivalued: true
-        inlined_as_list: true
-        range: IngredientSpecification
+  IngredientLabel:
+    class_uri: pmd:Material
+  IngredientSpecLabel:
+    class_uri: pmd:IngredientSpecificationDatum
 # slots are first-class entities in the metamodel
 # declaring them here allows them to be reused elsewhere
 slots:
@@ -34,13 +34,15 @@ slots:
     identifier: true
     required: true
   ingredient:
-    slot_uri: pmd:Material
+    range: IngredientLabel
+    slot_uri: iao:IAO_0000136
     required: true
     description:
       # Place material definition here
       Substance which is part of ingredients specified in the datum
   ingredient specification datum:
-    slot_uri: pmd:IngredientSpecificationDatum
+    range: IngredientSpecLabel
+    slot_uri: obo:BFO_0000051
     required: true
     description:
       # Replace definition here from PMD
