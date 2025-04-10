@@ -6,7 +6,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
-select ?setting_datum ?device ?physical_quality 
+select ?setting_datum ?device ?physical_quality ?scalarValueSpec ?numeric_val
         WHERE
         {
             ?setting_datum a pmd:SettingDatum .
@@ -14,4 +14,7 @@ select ?setting_datum ?device ?physical_quality
 			?setting_datum iao:IAO_0000136 ?device .
 			?device a pmd:Device.
 			?physical_quality a pmd:Quality.
+			?scalarValueSpec a obi:OBI_0001931.
+			?setting_datum obi:OBI_0001938 ?scalarValueSpec.
+			?scalarValueSpec obi:OBI_0001937 ?numeric_val.
         }
