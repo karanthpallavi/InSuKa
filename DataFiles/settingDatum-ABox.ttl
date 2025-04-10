@@ -1,0 +1,20 @@
+@prefix iao: <http://purl.obolibrary.org/obo/iao.owl/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ro: <http://purl.obolibrary.org/obo/ro.owl/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+##########################################################################
+#Individuals
+##########################################################################
+<https://tib.eu/ontologies/isk/Speed> rdf:type owl:NamedIndividual,
+pmd:Quality;
+
+<https://tib.eu/ontologies/isk/Rotor> rdf:type owl:NamedIndividual,
+pmd:Device;
+
+<https://tib.eu/ontologies/isk/SettingDatum_RotorSpeed> rdf:type owl:NamedIndividual,
+pmd:SettingDatum;
+iao:IAO_0000136 <https://tib.eu/ontologies/isk/Rotor>;
+ro:0000058 <https://tib.eu/ontologies/isk/Speed> .
