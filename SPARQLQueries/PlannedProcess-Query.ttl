@@ -1,0 +1,14 @@
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ro: <http://purl.obolibrary.org/obo/ro.owl/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+select ?process1 ?process2 ?process3 WHERE
+{
+	?process1 a obi:OBI_0000011.
+	?process2 a obi:OBI_0000011.
+	?process3 a obi:OBI_0000011.
+	?process1 ro:RO_0002224 ?process2.
+	?process2 ro:RO_0002082 ?process3.
+}
