@@ -1,0 +1,15 @@
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ro: <http://purl.obolibrary.org/obo/ro.owl/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:IngredientPattern
+    a sh:NodeShape ;
+    sh:targetClass  pmd:Material ; 
+    sh:property [
+		sh:class  pmd:Quality;
+        sh:path ro:RO_0000086 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
