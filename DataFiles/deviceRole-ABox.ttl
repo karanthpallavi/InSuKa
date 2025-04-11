@@ -1,0 +1,21 @@
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ro: <http://purl.obolibrary.org/obo/ro.owl/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+##########################################################################
+#Individuals
+##########################################################################
+<https://tib.eu/ontologies/isk/MixingProcess_Step1> rdf:type owl:NamedIndividual,
+obi:OBI_0000011 .
+
+<https://tib.eu/ontologies/isk/DeviceFunction_Mixing> rdf:type owl:NamedIndividual,
+obo:BFO_0000034 .
+
+<https://tib.eu/ontologies/isk/MixingChamber> rdf:type owl:NamedIndividual,
+pmd:Device;
+ro:RO_0000085 <https://tib.eu/ontologies/isk/DeviceFunction_Mixing> ;
+ro:RO_0002215 <https://tib.eu/ontologies/isk/MixingProcess_Step1> .
