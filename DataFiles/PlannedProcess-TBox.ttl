@@ -1,0 +1,33 @@
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ro: <http://purl.obolibrary.org/obo/ro.owl/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:PlannedProcessPattern
+    a sh:NodeShape ;
+    sh:targetClass  obi:OBI_0000011 ; 
+    sh:property [
+		sh:class  obi:OBI_0000011;
+        sh:path ro:RO_0002090 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  obi:OBI_0000011;
+        sh:path ro:RO_0002230 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  obi:OBI_0000011;
+        sh:path ro:RO_0002224 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  obi:OBI_0000011;
+        sh:path ro:RO_0002018 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;

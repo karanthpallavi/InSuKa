@@ -1,0 +1,25 @@
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ro: <http://purl.obolibrary.org/obo/ro.owl/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+##########################################################################
+#Individuals
+##########################################################################
+
+<https://tib.eu/ontologies/isk/PlannedProcess_Mixing> rdf:type owl:NamedIndividual,
+obi:OBI_0000011 .
+<https://tib.eu/ontologies/isk/PlannedProcess_Addition_EPDM> rdf:type owl:NamedIndividual,
+obi:OBI_0000011 .
+<https://tib.eu/ontologies/isk/PlannedProcess_Addition_Filler> rdf:type owl:NamedIndividual,
+obi:OBI_0000011 .
+<https://tib.eu/ontologies/isk/PlannedProcess_Addition_Rhenogran_CBS> rdf:type owl:NamedIndividual,
+obi:OBI_0000011 .
+<https://tib.eu/ontologies/isk/PlannedProcess_Addition_StearicAcid> rdf:type owl:NamedIndividual,
+obi:OBI_0000011 .
+<https://tib.eu/ontologies/isk/PlannedProcess_Mixing> ro:RO_0002224 <https://tib.eu/ontologies/isk/PlannedProcess_Addition_EPDM>;
+ro:RO_0002018 <https://tib.eu/ontologies/isk/PlannedProcess_Addition_EPDM>  .
+
+<https://tib.eu/ontologies/isk/PlannedProcess_Addition_Filler> ro:RO_0002090 <https://tib.eu/ontologies/isk/PlannedProcess_Addition_EPDM> ;
+ro:RO_0002082 <https://tib.eu/ontologies/isk/PlannedProcess_Addition_StearicAcid> .
