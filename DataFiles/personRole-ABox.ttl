@@ -1,0 +1,21 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/bfo.owl/> .
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ro: <http://purl.obolibrary.org/obo/ro.owl/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+##########################################################################
+#Individuals
+##########################################################################
+<https://tib.eu/ontologies/isk/WorkerRole_Assistant_MixingLab> rdf:type owl:NamedIndividual,
+bfo:role .
+
+<https://tib.eu/ontologies/isk/MixingProcess_Step1> rdf:type owl:NamedIndividual,
+obi:OBI_0000011 .
+
+<https://tib.eu/ontologies/isk/Person_John> rdf:type owl:NamedIndividual,
+pmd:Person;
+ro:RO_0000087 <https://tib.eu/ontologies/isk/WorkerRole_Assistant_MixingLab>;
+ro:RO_0002215 <https://tib.eu/ontologies/isk/MixingProcess_Step1> .

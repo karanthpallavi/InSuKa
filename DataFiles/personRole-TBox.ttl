@@ -1,0 +1,23 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/bfo.owl/> .
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ro: <http://purl.obolibrary.org/obo/ro.owl/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:PersonRolePattern
+    a sh:NodeShape ;
+    sh:targetClass  pmd:Person ; 
+    sh:property [
+		sh:class  bfo:role;
+        sh:path ro:RO_0000087 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  obi:OBI_0000011;
+        sh:path ro:RO_0002215 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
