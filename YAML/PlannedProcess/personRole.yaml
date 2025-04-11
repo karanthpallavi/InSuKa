@@ -1,0 +1,55 @@
+id: https://w3id.org/pmd/co/Person
+name: Person
+created_by: https://orcid.org/0000-0002-8280-0487
+contributors: https://orcid.org/0009-0007-5934-1087
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  pmd: https://w3id.org/pmd/co/
+  obo: http://purl.obolibrary.org/obo/
+  obi: http://purl.obolibrary.org/obo/obi.owl/
+  iao: http://purl.obolibrary.org/obo/iao.owl/
+  isk: https://tib.eu/ontologies/isk/
+  time: http://www.w3.org/2006/time/
+  stato: http://purl.obolibrary.org/stato.owl/
+  bfo: http://purl.obolibrary.org/obo/bfo.owl/
+  ro: http://purl.obolibrary.org/obo/ro.owl/
+imports:
+  - linkml:types
+#default_range: string
+
+classes:
+  Person:
+    class_uri: pmd:Person
+    slots:   ## specified as a list
+      - process
+      - role
+    id_prefixes:
+  RoleLabel:
+    class_uri: bfo:role
+  ProcessLabel:
+    class_uri: obi:OBI_0000011
+  Container:
+    attributes:
+      Person:
+        multivalued: true
+        inlined_as_list: true
+        range: Person
+# slots are first-class entities in the metamodel
+# declaring them here allows them to be reused elsewhere
+slots:
+  id:
+    identifier: true
+    required: true
+  process:
+    range: ProcessLabel
+    slot_uri: ro:RO_0002215
+    required: true
+    description:
+      A process that realizes a plan which is the concretization of a plan specification.
+  role:
+    range: RoleLabel
+    slot_uri: ro:RO_0000087
+    required: true
+    description:
+      role is a realizable entity & role exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be.
