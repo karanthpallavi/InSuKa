@@ -1,0 +1,38 @@
+id: https://w3id.org/pmd/co/IngredientShape
+name: Ingredient
+created_by: https://orcid.org/0000-0002-8280-0487
+contributors: https://orcid.org/0009-0007-5934-1087
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  pmd: https://w3id.org/pmd/co/
+  obo: http://purl.obolibrary.org/obo/
+  obi: http://purl.obolibrary.org/obo/obi.owl/
+  iao: http://purl.obolibrary.org/obo/iao.owl/
+  isk: https://tib.eu/ontologies/isk/
+  time: http://www.w3.org/2006/time/
+  stato: http://purl.obolibrary.org/stato.owl/
+  ro: http://purl.obolibrary.org/obo/ro.owl/
+imports:
+  - linkml:types
+#default_range: string
+
+classes:
+  Ingredient:
+    class_uri: pmd:Material
+    slots:   ## specified as a list
+      - quality
+    id_prefixes:
+  QualityLabel:
+    class_uri: pmd:Quality
+slots:
+  id:
+    identifier: true
+    required: true
+  quality:
+    range: QualityLabel
+    slot_uri: ro:RO_0000086
+    required: true
+    description:
+      #Place definition here - unable to find in pmd - class Quality
+      Quality being concretized in the setting datum
