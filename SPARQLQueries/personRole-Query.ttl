@@ -1,0 +1,16 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/bfo.owl/> .
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ro: <http://purl.obolibrary.org/obo/ro.owl/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+select ?personRole ?process ?person WHERE
+{
+	?person a pmd:Person.
+	?person ro:RO_0000087 ?personRole .
+	?person ro:RO_0002215 ?process.
+	?process a obi:OBI_0000011.
+	?personRole a bfo:role.
+}
