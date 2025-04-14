@@ -1,0 +1,25 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/bfo.owl/> .
+@prefix iao: <http://purl.obolibrary.org/obo/iao.owl/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+##########################################################################
+#Individuals
+##########################################################################
+<https://tib.eu/ontologies/isk/DeviceSpecification_Mixer> rdf:type owl:NamedIndividual,
+pmd:DeviceSpecification .
+<https://tib.eu/ontologies/isk/IngredientSpecification_RhenogranCBS> rdf:type owl:NamedIndividual,
+pmd:IngredientSpecification .
+<https://tib.eu/ontologies/isk/RhenogranCBS> rdf:type owl:NamedIndividual,
+pmd:Material .
+<https://tib.eu/ontologies/isk/Mixing_EPDM> rdf:type owl:NamedIndividual,
+pmd:Mixing .
+<https://tib.eu/ontologies/isk/InstructionStep_Addition_of_Filler> rdf:type owl:NamedIndividual,
+pmd:InstructionStep ;
+bfo:BFO_0000051 <https://tib.eu/ontologies/isk/IngredientSpecification_RhenogranCBS>;
+iao:IAO_0000136 <https://tib.eu/ontologies/isk/RhenogranCBS>;
+iao:IAO_0000136 <https://tib.eu/ontologies/isk/Mixing_EPDM>;
+bfo:BFO_0000051 <https://tib.eu/ontologies/isk/DeviceSpecification_Mixer>;
+<https://w3id.org/pmd/co/InstructionStep/:numeric_position> 1^^xsd:integer .

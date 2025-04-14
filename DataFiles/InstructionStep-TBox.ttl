@@ -1,0 +1,46 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/bfo.owl/> .
+@prefix iao: <http://purl.obolibrary.org/obo/iao.owl/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:InstructionStepPattern
+    a sh:NodeShape ;
+    sh:targetClass  pmd:InstructionStep ; 
+    sh:property [
+		sh:class  pmd:IngredientSpecification;
+        sh:path bfo:BFO_0000051 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  pmd:Material;
+        sh:path iao:IAO_0000136 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  <xsd:integer>;
+        sh:path <https://w3id.org/pmd/co/InstructionStep/:numeric_position> ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  pmd:Mixing;
+        sh:path iao:IAO_0000136 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  pmd:DeviceSpecification;
+        sh:path bfo:BFO_0000051 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  pmd:Device;
+        sh:path iao:IAO_0000136 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
