@@ -1,0 +1,32 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/bfo.owl/> .
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix stato: <http://purl.obolibrary.org/stato.owl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+##########################################################################
+#Individuals
+##########################################################################
+<https://tib.eu/ontologies/isk/DeviceSpecification_Mixer> rdf:type owl:NamedIndividual,
+pmd:DeviceSpecification .
+<https://tib.eu/ontologies/isk/EPDM> rdf:type owl:NamedIndividual,
+pmd:Material .
+<https://tib.eu/ontologies/isk/Keltan_9950_C> rdf:type owl:NamedIndividual,
+pmd:Material .
+<https://tib.eu/ontologies/isk/InstructionStep_Addition_of_Filler> rdf:type owl:NamedIndividual,
+pmd:InstructionStep .
+<https://tib.eu/ontologies/isk/ObjectiveSpecification_EPDM_LowMooneyViscosity> rdf:type owl:NamedIndividual,
+pmd:ObjectiveSpecification .
+
+<https://tib.eu/ontologies/isk/MixingRecipe_EPDM> rdf:type owl:NamedIndividual,
+pmd:MixingRecipe .
+<https://tib.eu/ontologies/isk/Mixing_EPDM> rdf:type owl:NamedIndividual,
+pmd:Mixing .
+obi:OBI_0000293 <https://tib.eu/ontologies/isk/EPDM>;
+obi:OBI_0000299 <https://tib.eu/ontologies/isk/Keltan_9950_C>;
+obi:OBI_0000293 <https://tib.eu/ontologies/isk/DeviceSpecification_Mixer>;
+obi:OBI_0000293 <https://tib.eu/ontologies/isk/InstructionStep_Addition_of_Filler> ;
+stato:STATO_0000102 <https://tib.eu/ontologies/isk/MixingRecipe_EPDM>;
+bfo:BFO_0000066 <https://tib.eu/ontologies/isk/ObjectiveSpecification_EPDM_LowMooneyViscosity> .

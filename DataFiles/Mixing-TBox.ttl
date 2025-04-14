@@ -1,0 +1,55 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/bfo.owl/> .
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix stato: <http://purl.obolibrary.org/stato.owl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:MixingPattern
+    a sh:NodeShape ;
+    sh:targetClass  pmd:Mixing ; 
+    sh:property [
+		sh:class  pmd:Material;
+		sh:description "Input Material used in mixing process";
+        sh:path obi:OBI_0000293 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  pmd:InstructionStep;
+        sh:path obi:OBI_0000293 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  pmd:MixingRecipe;
+        sh:path stato:STATO_0000102 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  pmd:ObjectiveSpecification;
+        sh:path obi:OBI_0000417 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] 
+	sh:property [
+		sh:class  pmd:Material;
+		sh:description "Output Material used in mixing process";
+        sh:path obi:OBI_0000299 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  bfo:BFO_0000040;
+        sh:path bfo:BFO_0000066 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  pmd:Device;
+        sh:path obi:OBI_0000293  ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
