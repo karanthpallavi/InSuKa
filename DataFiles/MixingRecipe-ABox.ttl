@@ -1,0 +1,24 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/bfo.owl/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+##########################################################################
+#Individuals
+##########################################################################
+<https://tib.eu/ontologies/isk/DeviceSpecificationSet_EPDMMixing> rdf:type owl:NamedIndividual,
+pmd:DeviceSpecificationSet .
+<https://tib.eu/ontologies/isk/IngredientSpecificationSet_EPDM> rdf:type owl:NamedIndividual,
+pmd:IngredientSpecificationSet .
+<https://tib.eu/ontologies/isk/InstructionSet_EPDM> rdf:type owl:NamedIndividual,
+pmd:InstructionSet .
+<https://tib.eu/ontologies/isk/ObjectiveSpecificationSet_EPDM> rdf:type owl:NamedIndividual,
+pmd:ObjectiveSpecificationSet .
+
+<https://tib.eu/ontologies/isk/MixingRecipe_EPDM> rdf:type owl:NamedIndividual,
+pmd:MixingRecipe ;
+bfo:BFO_0000051 <https://tib.eu/ontologies/isk/DeviceSpecificationSet_EPDMMixing>;
+bfo:BFO_0000051 <https://tib.eu/ontologies/isk/IngredientSpecificationSet_EPDM>;
+bfo:BFO_0000051 <https://tib.eu/ontologies/isk/InstructionSet_EPDM>;
+bfo:BFO_0000051 <https://tib.eu/ontologies/isk/ObjectiveSpecificationSet_EPDM> .

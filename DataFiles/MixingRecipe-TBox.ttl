@@ -1,0 +1,33 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/bfo.owl/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:MixingRecipePattern
+    a sh:NodeShape ;
+    sh:targetClass  pmd:MixingRecipe ; 
+    sh:property [
+		sh:class  pmd:InstructionSet;
+        sh:path bfo:BFO_0000051 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  pmd:IngredientSpecificationSet;
+        sh:path bfo:BFO_0000051 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  pmd:ObjectiveSpecificationSet;
+        sh:path bfo:BFO_0000051 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
+	sh:property [
+		sh:class  pmd:DeviceSpecificationSet;
+        sh:path bfo:BFO_0000051 ;        
+        sh:maxCount 1;
+		sh:minCount 1;
+    ] ;
