@@ -1,0 +1,23 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/bfo.owl/> .
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix stato: <http://purl.obolibrary.org/stato.owl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+select ?mixing ?recipe ?instructionStep ?ingred ?output ?device ?objective WHERE
+{
+	?mixing a pmd:Mixing.
+	?mixing obi:OBI_0000293 ?ingred.
+	?mixing obi:OBI_0000299 ?output.
+	?mixing obi:OBI_0000293 ?instructionStep.
+	?mixing obi:OBI_0000293 ?device.
+	?mixing stato:STATO_0000102 ?recipe.
+	?mixing bfo:BFO_0000066 ?objective.
+	?ingred a pmd:Material.
+	?output a pmd:Material.
+	?device a pmd:Device.
+	?instructionStep a pmd:InstructionStep.
+	?objective a pmd:ObjectiveSpecification.
+}
