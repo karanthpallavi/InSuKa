@@ -1,0 +1,14 @@
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ro: <http://purl.obolibrary.org/obo/ro.owl/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+##########################################################################
+#Individuals
+##########################################################################
+<https://tib.eu/ontologies/isk/IngredientSpecification_RhenogranCBS> rdf:type owl:NamedIndividual,
+pmd:IngredientSpecification .
+<https://tib.eu/ontologies/isk/IngredientSpecificationSet_EPDMMixing> rdf:type owl:NamedIndividual,
+pmd:IngredientSpecificationSet ;
+ro:RO_0002351 <https://tib.eu/ontologies/isk/IngredientSpecification_RhenogranCBS> .
