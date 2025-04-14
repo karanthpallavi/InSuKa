@@ -1,0 +1,71 @@
+id: https://w3id.org/pmd/co/MixingRecipe
+name: MixingRecipe
+created_by: https://orcid.org/0000-0002-8280-0487
+contributors: https://orcid.org/0009-0007-5934-1087
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  pmd: https://w3id.org/pmd/co/
+  obo: http://purl.obolibrary.org/obo/
+  obi: http://purl.obolibrary.org/obo/obi.owl/
+  iao: http://purl.obolibrary.org/obo/iao.owl/
+  isk: https://tib.eu/ontologies/isk/
+  time: http://www.w3.org/2006/time/
+  stato: http://purl.obolibrary.org/stato.owl/
+  bfo: http://purl.obolibrary.org/obo/bfo.owl/
+  ro: http://purl.obolibrary.org/obo/ro.owl/
+imports:
+  - linkml:types
+#default_range: string
+
+classes:
+  MixingRecipe:
+    class_uri: pmd:MixingRecipe
+    slots:   ## specified as a list
+      - objective spec
+      - instruction set
+      - device spec
+      - ingredient spec
+    id_prefixes:
+  ObjectiveSpecSetLabel:
+    class_uri: pmd:ObjectiveSpecificationSet
+  InstructionSetLabel:
+    class_uri: pmd:InstructionSet
+  DeviceSpecSetLabel:
+    class_uri: pmd:DeviceSpecificationSet
+  IngredSpecSetLabel:
+    class_uri: pmd:IngredientSpecificationSet
+# slots are first-class entities in the metamodel
+# declaring them here allows them to be reused elsewhere
+slots:
+  id:
+    identifier: true
+    required: true
+  objective spec:
+    range: ObjectiveSpecSetLabel
+    slot_uri: bfo:BFO_0000051
+    required: true
+    description:
+      # Replace with actual definition
+      Objective Specification Set is a set of objectives which will be achieved
+  instruction set:
+    range: InstructionSetLabel
+    slot_uri: bfo:BFO_0000051
+    required: true
+    description:
+      # Replace with actual definition
+      Set of instructions in the mixing recipe
+  device spec:
+    range: DeviceSpecSetLabel
+    slot_uri: bfo:BFO_0000051
+    required: true
+    description:
+      # Replace with actual definition
+      Set of specifications of devices used in mixing recipe
+  ingredient spec:
+    range: IngredSpecSetLabel
+    slot_uri: bfo:BFO_0000051
+    required: true
+    description:
+      # Replace with actual definition
+      Set of specifications of ingredients used in mixing recipe
