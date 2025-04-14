@@ -1,0 +1,16 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/bfo.owl/> .
+@prefix iao: <http://purl.obolibrary.org/obo/iao.owl/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+select ?ingredSpec ?instruction_step ?device ?mixing ?pos ?material WHERE
+{
+	?instruction_step a pmd:InstructionStep.
+	?instruction_step bfo:BFO_0000051 ?ingredSpec .
+	?instruction_step iao:IAO_0000136 ?material.
+	?instruction_step iao:IAO_0000136 ?mixing.
+	?instruction_step bfo:BFO_0000051 ?device.
+	?instruction_step pmd:numeric_position ?pos.
+}
