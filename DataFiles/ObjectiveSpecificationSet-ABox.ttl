@@ -1,0 +1,14 @@
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ro: <http://purl.obolibrary.org/obo/ro.owl/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+##########################################################################
+#Individuals
+##########################################################################
+<https://tib.eu/ontologies/isk/ObjectiveSpecification_EPDMMixing_lowMooneyViscosity> rdf:type owl:NamedIndividual,
+pmd:ObjectiveSpecification .
+<https://tib.eu/ontologies/isk/ObjectiveSpecificationSet_EPDMMixing> rdf:type owl:NamedIndividual,
+pmd:ObjectiveSpecificationSet ;
+ro:RO_0002351 <https://tib.eu/ontologies/isk/ObjectiveSpecification_EPDMMixing_lowMooneyViscosity> .
