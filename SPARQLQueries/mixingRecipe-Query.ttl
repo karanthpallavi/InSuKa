@@ -1,0 +1,18 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/bfo.owl/> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+select ?mixingrecipe ?ingredSpecSet ?deviceSpecSet ?objSpecSet ?instructionSet WHERE
+{
+	?mixingrecipe a pmd:MixingRecipe.
+	?mixingrecipe bfo:BFO_0000051 ?ingredSpecSet.
+	?mixingrecipe bfo:BFO_0000051 ?deviceSpecSet.
+	?mixingrecipe bfo:BFO_0000051 ?objSpecSet.
+	?mixingrecipe bfo:BFO_0000051 ?instructionSet.
+	?ingredSpecSet a pmd:IngredientSpecificationSet.
+	?objSpecSet a pmd:ObjectiveSpecificationSet.
+	?instructionSet a pmd:InstructionSet.
+}
