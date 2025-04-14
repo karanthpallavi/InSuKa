@@ -1,0 +1,12 @@
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ro: <http://purl.obolibrary.org/obo/ro.owl/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+select ?objSpecSet ?objSpec WHERE
+{
+	?objSpecSet a pmd:ObjectiveSpecificationSet.
+	?objSpec a pmd:ObjectiveSpecification.
+	?objSpecSet ro:RO_0002351 ?objSpec.
+}
