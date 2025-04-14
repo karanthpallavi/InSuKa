@@ -6,7 +6,7 @@
 
 select ?ingredSpecSet ?ingredSpec WHERE
 {
-	?ingredSpecSet a pmd:ingredientSpecificationSet.
-	?ingredSpec a pmd:ingredientSpecification.
+	?ingredSpecSet a pmd:IngredientSpecificationSet.
+	?ingredSpec a pmd:IngredientSpecification.
 	?ingredSpecSet ro:RO_0002351 ?ingredSpec.
 }
