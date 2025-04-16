@@ -7,6 +7,6 @@ The Shapes folder contains all .shacl.ttl files which are the SHACL files which 
 
 The Patterns folder contains the pictorial representation of each pattern - pattern in general and example of usage of the pattern in real world.
 
-The Queries folder contains SPARQL queries to query the graph containing the data for all the patterns used within the ontology of InSuKa (DIGIT-RUBBER).
+The SPARQLQueries folder contains SPARQL queries to query the graph containing the data for all the patterns used within the ontology of InSuKa (DIGIT-RUBBER).
 
 The DataFiles folder contains T-Box and A-Box representations in ttl format for each of the patterns within PMDCo and will be reused in DIGIT-RUBBER.
