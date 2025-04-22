@@ -28,12 +28,12 @@ classes:
       ##- contributors
     id_prefixes:
       ##- ORCID
-  objectlabel:
-    class_uri: pmd:Object
+  #objectlabel:
+    #class_uri: pmd:Object
   measurementunitlabel:
     class_uri: iao:IAO_0000003
-  qualitylabel:
-    class_uri: pmd:quality
+  #qualitylabel:
+    #class_uri: pmd:quality
   #valueLabel:
     #class_uri: rdfs:value
   #specNumericValueLabel:
